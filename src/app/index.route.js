@@ -8,12 +8,16 @@
   /** @ngInject */
   function routerConfig($stateProvider, $urlRouterProvider) {
     $stateProvider
-      .state('home', {
-        url: "/",
-        template: '<home></home>'
+      .state('blog', {
+        url: "/blog",
+        template: '<blog></blog>'
+      })
+      .state('openSource', {
+        url: "/open-source",
+        template: '<open-source></open-source>'
       });
 
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/blog');
   }
 
 })();

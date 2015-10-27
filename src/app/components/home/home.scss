@@ -2,11 +2,9 @@
   @extend .text-center;
   background: #000 url('/assets/images/splash.png') center center;
   background-size: cover;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
+  height: calc(100% - 54px);
+  padding-top: 10%;
+  margin-bottom: 0;
 
   h1 {
     display: inline-block;

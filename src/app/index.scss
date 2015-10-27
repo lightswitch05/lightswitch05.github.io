@@ -20,8 +20,13 @@ $font-family-base: 'lato';
   padding: 0.2em 0;
 }
 
-html ,body, .primary {
+html, body {
   height: 100%;
+}
+
+.primary {
+  @extend .container;
+  margin-top: 90px;
 }
 
 /**
