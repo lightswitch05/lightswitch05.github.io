@@ -1,6 +1,6 @@
 angular
   .module('app')
-  .directive('toolbar', toolbar);
+  .directive('dwToolbar', toolbar);
 
 function toolbar() {
   var directive = {

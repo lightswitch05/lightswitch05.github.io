@@ -5,19 +5,20 @@
     .module('app')
     .config(routerConfig);
 
-  /** @ngInject */
   function routerConfig($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('blog', {
         url: "/blog",
-        template: '<blog></blog>'
+        template: '<dw-blog></dw-blog>'
       })
       .state('openSource', {
         url: "/open-source",
-        template: '<open-source></open-source>'
+        template: '<dw-open-source></dw-open-source>'
       });
 
     $urlRouterProvider.otherwise('/blog');
   }
+
+  routerConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
 
 })();

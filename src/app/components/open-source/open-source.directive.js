@@ -1,6 +1,6 @@
 angular
   .module('app')
-  .directive('openSource', openSource);
+  .directive('dwOpenSource', openSource);
 
 function openSource() {
   var directive = {

@@ -5,10 +5,10 @@
     .module('app')
     .run(runBlock);
 
-  /** @ngInject */
   function runBlock($log) {
-
     $log.debug('runBlock end');
   }
+
+  runBlock.$inject = ['$log'];
 
 })();

@@ -5,10 +5,13 @@
     .module('app')
     .config(config);
 
-  /** @ngInject */
-  function config($logProvider) {
-    // Enable log
-    $logProvider.debugEnabled(true);
+  function config($logProvider, $compileProvider, $httpProvider) {
+    var debug = false;
+    $logProvider.debugEnabled(debug);
+    $compileProvider.debugInfoEnabled(debug);
+    $httpProvider.useLegacyPromiseExtensions(false);
   }
+
+  config.$inject = ['$logProvider', '$compileProvider', '$httpProvider'];
 
 })();

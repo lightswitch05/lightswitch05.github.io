@@ -1,6 +1,6 @@
 angular
   .module('app')
-  .directive('home', home);
+  .directive('dwHome', home);
 
 function home() {
   var directive = {

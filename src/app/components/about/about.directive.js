@@ -1,6 +1,6 @@
 angular
   .module('app')
-  .directive('about', about);
+  .directive('dwAbout', about);
 
 function about() {
   var directive = {
