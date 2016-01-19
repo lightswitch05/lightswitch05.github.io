@@ -29,6 +29,12 @@ html, body {
   margin-top: 90px;
 }
 
+code {
+  display: inline-block;
+  background-color: #eee;
+  color: #333;
+}
+
 /**
  *  Do not remove the comments below. It's the markers used by gulp-inject to inject
  *  all your sass files automatically

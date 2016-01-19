@@ -11,6 +11,10 @@
         url: "/blog",
         template: '<dw-blog></dw-blog>'
       })
+      .state('blog.fullpost', {
+        url: "/:id",
+        template: '<dw-blog></dw-blog>'
+      })
       .state('openSource', {
         url: "/open-source",
         template: '<dw-open-source></dw-open-source>'

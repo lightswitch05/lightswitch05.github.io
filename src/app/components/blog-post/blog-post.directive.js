@@ -8,7 +8,8 @@ function blogPost() {
     templateUrl: 'app/components/blog-post/blog-post.html',
     scope: true,
     bindToController: {
-      post: '='
+      post: '=',
+      selected: '='
     },
     controllerAs: 'ctrl',
     controller: blogPostController
@@ -19,4 +20,5 @@ function blogPost() {
 
 function blogPostController() {
   var ctrl = this;
+  this.selected = this.selected || false;
 }

@@ -1,3 +1,8 @@
 .navbar {
   margin-bottom: -53px;
 }
+
+dw-toolbar .affix,
+dw-toolbar .affix-top {
+  z-index: 1000;
+}
