@@ -13,7 +13,13 @@
       })
       .state('blog.fullpost', {
         url: "/:id",
-        template: '<dw-blog></dw-blog>'
+        template: '<dw-blog></dw-blog>',
+        onEnter: ['$state', '$stateParams', '$location', '$anchorScroll', function ($state, $stateParams, $location, $anchorScroll) {
+          setTimeout(function() {
+            $location.hash($stateParams.id);
+            $anchorScroll();
+          });
+        }]
       })
       .state('openSource', {
         url: "/open-source",
