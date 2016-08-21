@@ -92,7 +92,27 @@ gulp.task('other', function () {
 });
 
 gulp.task('clean', function () {
-  return $.del([path.join(conf.paths.dist, '/'), path.join(conf.paths.tmp, '/')]);
+  return $.del([
+    path.join(conf.paths.dist, '/'),
+    path.join(conf.paths.tmp, '/'),
+    'assets/',
+    'fonts/',
+    'maps/',
+    'scripts/',
+    'styles/'
+  ]);
+});
+
+gulp.task('deploy', ['build'], function () {
+  var fileFilter = $.filter(function (file) {
+    return file.stat.isFile();
+  });
+
+  return gulp.src([
+    path.join(conf.paths.dist, '/**/*')
+  ])
+    .pipe(fileFilter)
+    .pipe(gulp.dest('.'));
 });
 
 gulp.task('build', ['html', 'fonts', 'other']);
