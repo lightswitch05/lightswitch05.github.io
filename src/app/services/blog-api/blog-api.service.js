@@ -15,4 +15,4 @@ function blogApi($http) {
   }
 }
 
-blog.$inject = ['$http'];
+blogApi.$inject = ['$http'];

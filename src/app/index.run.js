@@ -5,11 +5,16 @@
     .module('app')
     .run(runBlock);
 
-  function runBlock($log, $anchorScroll) {
+  function runBlock($anchorScroll, $rootScope, $location, $window) {
     $anchorScroll.yOffset = 50;
-    $log.debug('runBlock end');
-  }
 
-  runBlock.$inject = ['$log', '$anchorScroll'];
+    $rootScope
+      .$on('$stateChangeSuccess', function() {
+          if ($window.ga) {
+            $window.ga('send', 'pageview', { page: $location.path() });
+          }
+      });
+  }
+  runBlock.$inject = ['$anchorScroll', '$rootScope', '$location', '$window'];
 
 })();
