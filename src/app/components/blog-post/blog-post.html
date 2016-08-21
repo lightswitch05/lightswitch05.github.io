@@ -1,0 +1,9 @@
+<article class="blog-post" ui-sref-active-eq="active" id="{{ctrl.post.id}}">
+  <header>
+    <h1>{{ctrl.post.title}} <small>{{ctrl.post.published | date}}</small></h1>
+    <div class="blog-post-body" btf-markdown="ctrl.post.body"></div>
+    <div class="read-more">
+      <a ui-sref="blog.fullpost({id: ctrl.post.id})" ui-sref-opts="{reload: true}">More...</a>
+    </div>
+  </header>
+</article>
