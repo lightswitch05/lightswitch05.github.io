@@ -1,9 +1,9 @@
 // service
 angular
   .module('app')
-  .service('blog', blog);
+  .service('blogApi', blogApi);
 
-function blog($http) {
+function blogApi($http) {
   this.posts = posts;
 
   function posts() {

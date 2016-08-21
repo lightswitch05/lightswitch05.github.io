@@ -9,7 +9,7 @@ function blogPost() {
     scope: true,
     bindToController: {
       post: '=',
-      selected: '='
+      selected: '=?'
     },
     controllerAs: 'ctrl',
     controller: blogPostController

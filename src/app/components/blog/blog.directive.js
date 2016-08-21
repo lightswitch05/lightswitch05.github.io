@@ -15,14 +15,14 @@ function blog() {
   return directive;
 }
 
-function blogController(blog) {
+function blogController(blogApi) {
   var ctrl = this;
   this.posts = [];
 
-  blog.posts().then(
+  blogApi.posts().then(
     function(posts){
       ctrl.posts = posts;
     }
   );
 }
-blogController.$inject = ['blog'];
+blogController.$inject = ['blogApi'];
