@@ -26,7 +26,7 @@
         template: '<dw-open-source></dw-open-source>'
       });
 
-    $urlRouterProvider.otherwise('/blog');
+    $urlRouterProvider.otherwise('/open-source');
   }
 
   routerConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
