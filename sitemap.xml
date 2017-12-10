@@ -5,16 +5,16 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-<url>
-  <loc>http://lightswitch05.github.io/</loc>
-</url>
-<url>
-  <loc>http://lightswitch05.github.io/table-to-json/</loc>
-</url>
-<url>
-  <loc>http://lightswitch05.github.io/filterable/</loc>
-</url>
-<url>
-  <loc>http://lightswitch05.github.io/commit-cloud/</loc>
-</url>
+  <url>
+    <loc>http://www.developerdan.com/</loc>
+  </url>
+  <url>
+    <loc>http://www.developerdan.com/table-to-json/</loc>
+  </url>
+  <url>
+    <loc>http://www.developerdan.com/filterable/</loc>
+  </url>
+  <url>
+    <loc>http://www.developerdan.com/commit-cloud/</loc>
+  </url>
 </urlset>
