@@ -6,15 +6,21 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
   <url>
-    <loc>http://www.developerdan.com/</loc>
+    <loc>https://www.github.developerdan.com/</loc>
   </url>
   <url>
-    <loc>http://www.developerdan.com/table-to-json/</loc>
+    <loc>https://www.github.developerdan.com/table-to-json/</loc>
   </url>
   <url>
-    <loc>http://www.developerdan.com/filterable/</loc>
+    <loc>https://www.github.developerdan.com/filterable/</loc>
   </url>
   <url>
-    <loc>http://www.developerdan.com/commit-cloud/</loc>
+    <loc>https://www.github.developerdan.com/commit-cloud/</loc>
+  </url>
+  <url>
+    <loc>https://www.github.developerdan.com/greatestchickentractor/</loc>
+  </url>
+  <url>
+    <loc>https://www.github.developerdan.com/hosts/</loc>
   </url>
 </urlset>
