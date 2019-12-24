@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <url>
+        <loc>https://www.github.developerdan.com/</loc>
+    </url>
+    <url>
+        <loc>https://www.github.developerdan.com/table-to-json/</loc>
+    </url>
+    <url>
+        <loc>https://www.github.developerdan.com/filterable/</loc>
+    </url>
+    <url>
+        <loc>https://www.github.developerdan.com/commit-cloud/</loc>
+    </url>
+    <url>
+        <loc>https://www.github.developerdan.com/greatestchickentractor/</loc>
+    </url>
+    <url>
+        <loc>https://www.github.developerdan.com/greatestchickentractor/construction</loc>
+    </url>
+    <url>
+        <loc>https://www.github.developerdan.com/hosts/</loc>
+    </url>
+    <url>
+        <loc>https://www.github.developerdan.com/php-version-audit/</loc>
+    </url>
+</urlset>
