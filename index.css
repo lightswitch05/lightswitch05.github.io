@@ -32,7 +32,10 @@ h3 {
     height: calc(100% - 150px);
     background-size: cover;
     text-align: center;
-    background: #292c34 url("img/gauss-crack.png") no-repeat fixed left;
+    background-color: #292c34;
+    background-image: url("img/gauss-crack.png");
+    background-repeat: no-repeat;
+    background-position: left;
 }
 
 .splash h1 {
@@ -71,6 +74,7 @@ ul {
 }
 
 .contribution {
+    width: 100%;
     max-width: 400px;
     padding-left: 10px;
     padding-right: 10px;
