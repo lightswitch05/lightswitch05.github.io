@@ -5,8 +5,9 @@ body, html {
 
 body {
     margin: 0 0 8px 0;
-    font-family: LatoLatinWeb, Lato, Arial, sans-serif;
-    font-size: 15px;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 17px;
+    line-height: 1.23536;
 }
 
 a {
@@ -45,7 +46,7 @@ h3 {
     color: #0f0;
     background-color: #000;
     margin: 10% 0 0;
-    font-family: "Lucida Console", Monaco, monospace;
+    font-family: "Courier New", monospace;
 }
 
 .blinking-cursor {
