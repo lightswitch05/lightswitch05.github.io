@@ -29,6 +29,12 @@ h3 {
     font-size: 36px;
 }
 
+main {
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .splash {
     height: calc(100% - 150px);
     background-size: cover;
