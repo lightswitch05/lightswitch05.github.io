@@ -33,6 +33,11 @@ h3 {
     font-size: 36px;
 }
 
+h3 small {
+    font-size: 18px;
+    color: #686868;
+}
+
 main {
     max-width: 1300px;
     margin-left: auto;
