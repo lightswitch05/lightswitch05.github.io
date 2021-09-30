@@ -66,6 +66,7 @@ main {
 
 .blinking-cursor {
     animation: 1.2s blink step-end infinite;
+    border: none;
 }
 
 @keyframes blink {
