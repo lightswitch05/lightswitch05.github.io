@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Generate SVG</title>
+</head>
+<body>
+
+<button onclick="saveSvg('svg', 'lightswitch05.svg')">Save</button>
+
+<div id="svg-container" style="width:100%;height:100%; max-width: 700px; max-height: 700px;">
+  <svg id="svg" width='100%' height='100%' viewBox="0 0 100 100" preserveAspectRatio="xMidYMin meet" style='background-color: transparent' />
+</div>
+
+<script>
+
+  const DIAMOND_SIZE = 10.5;
+  const RECTANGLE_SIZE = 14;
+
+  function createDiamond(x, y) {
+    const diamond = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+
+    const aX = x - DIAMOND_SIZE;
+    const aY = y;
+
+    const bX = x;
+    const bY = y - DIAMOND_SIZE;
+
+    const cX = x + DIAMOND_SIZE;
+    const cY = y;
+
+    const dX = x;
+    const dY = y + DIAMOND_SIZE;
+
+    // <polygon points="0,25, 25,0, 50,25, 25,50 " style="fill:black" />
+    diamond.setAttribute("points", `${aX},${aY}, ${bX},${bY}, ${cX},${cY}, ${dX},${dY}`);
+    diamond.setAttribute("fill", "#e9e9e9");
+    //diamond.setAttribute("opacity", "0.3");
+    diamond.setAttribute("stroke", "none");
+    return diamond
+  }
+
+  function createTriangle(aX, aY, bX, bY, cX, cY) {
+    const triangle = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+    // <polygon points="20,50, 50,50, 50,20" style="fill:black" />
+    triangle.setAttribute("points", `${aX},${aY}, ${bX},${bY}, ${cX},${cY}`);
+    triangle.setAttribute("fill", "#585858");
+    //triangle.setAttribute("opacity", "0.3");
+    triangle.setAttribute("stroke", "none");
+    return triangle
+  }
+
+  function createRectangle(x, y) {
+    const rectangle = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+    rectangle.setAttribute("width", `${RECTANGLE_SIZE}`);
+    rectangle.setAttribute("height", `${RECTANGLE_SIZE}`);
+    rectangle.setAttribute("x", `${x}`);
+    rectangle.setAttribute("y", `${y}`);
+    rectangle.setAttribute("fill", "#68cfb7");
+    return rectangle;
+  }
+
+  function saveSvg(svgId, name) {
+    const svgEl = document.getElementById(svgId);
+    svgEl.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+    var svgData = svgEl.outerHTML;
+    var preface = '<?xml version="1.0" standalone="no"?>\r\n';
+    var svgBlob = new Blob([preface, svgData], {type:"image/svg+xml;charset=utf-8"});
+    var svgUrl = URL.createObjectURL(svgBlob);
+    var downloadLink = document.createElement("a");
+    downloadLink.href = svgUrl;
+    downloadLink.download = name;
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+  }
+
+  const svg = document.querySelector("svg");
+  svg.appendChild(createDiamond(39.5, 18.5));
+  svg.appendChild(createDiamond(60.5, 18.5));
+
+  svg.appendChild(createDiamond(18.5, 39.5));
+  svg.appendChild(createDiamond(18.5, 60.5));
+
+  svg.appendChild(createDiamond(81.5, 39.5));
+  svg.appendChild(createDiamond(81.5, 60.5));
+
+  svg.appendChild(createDiamond(39.5, 81.5));
+  svg.appendChild(createDiamond(60.5, 81.5));
+
+  svg.appendChild(createTriangle(8,29,   29,8,   29,29));
+  svg.appendChild(createTriangle(8,71,   29,92,   29,71));
+
+  svg.appendChild(createTriangle(71,29,   71,8,   92,29));
+  svg.appendChild(createTriangle(71,71,   71,92,   92,71));
+
+  svg.appendChild(createRectangle(52, 52));
+  svg.appendChild(createRectangle(34, 52));
+  svg.appendChild(createRectangle(34, 34));
+  svg.appendChild(createRectangle(52, 34));
+  generateSvgLink(svg);
+
+</script>
+
+</body>
+</html>
