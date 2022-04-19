@@ -403,8 +403,21 @@
         </section>
     </section>
 </main>
-<footer>Copyright &copy; 2021 Daniel White</footer>
+<footer>Copyright &copy; 2022 Daniel White</footer>
 
+<script type="application/javascript">
+    const DARK_THEME = 'darkTheme';
+    const LIGHT_THEME = 'lightTheme';
+    const LOCAL_STORAGE_KEY = 'preferred-theme';
+
+    let initialTheme = localStorage.getItem(LOCAL_STORAGE_KEY) ?? null;
+    if (!initialTheme) {
+        initialTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? LIGHT_THEME : DARK_THEME;
+    }
+    const root = document.documentElement;
+    root.classList.remove(DARK_THEME, LIGHT_THEME);
+    root.classList.add(initialTheme);
+</script>
 
 </body>
 </html>

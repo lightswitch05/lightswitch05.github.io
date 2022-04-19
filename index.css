@@ -1,13 +1,39 @@
+:root, :root.darkTheme {
+    --color: #c9d1d9;
+    --background-color: #0d1117;
+    --nav-color: #c9d1d9;
+    --nav-background-color: #161b22;
+    --link-color: #58a6ff;
+}
 
-body, html {
+:root.lightTheme {
+    --color: #24292f;
+    --background-color: #fff;
+    --nav-color: #fff;
+    --nav-background-color: #24292f;
+    --link-color: #23527c;
+}
+
+
+html {
     height: 100%;
+    max-height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+    font-family: "Inter", "system-ui";
+    line-height: 1.2;
 }
 
 body {
-    margin: 0 0 8px 0;
-    font-family: "Inter", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    font-size: 18px;
-    line-height: 1.25;
+    color: var(--color);
+    background-color: var(--background-color);
+    text-rendering: optimizeLegibility;
+    height: 100%;
+    max-height: 100%;
+    overflow: auto;
+    padding: 0;
+    margin: 0;
 }
 
 a {
@@ -41,8 +67,17 @@ h3 small {
 
 main {
     max-width: 1300px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 0 auto;
+    padding: 0;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 .splash {
@@ -126,4 +161,9 @@ footer {
 .github-logo {
     vertical-align: middle;
     height: 40px;
+}
+
+
+@supports (font-variation-settings: normal) {
+    html { font-family: "Inter var", "system-ui"; }
 }
