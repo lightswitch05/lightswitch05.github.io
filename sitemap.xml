@@ -28,6 +28,9 @@
         <loc>https://www.github.developerdan.com/php-version-audit/</loc>
     </url>
     <url>
+        <loc>https://www.github.developerdan.com/node-version-audit/</loc>
+    </url>
+    <url>
         <loc>https://blocklist-tools.developerdan.com</loc>
     </url>
 </urlset>
